@@ -1,0 +1,7 @@
+:host{
+  display: block;
+  width: 200px; /* Define a largura do menu */
+  height: 100vh; /* Mantém o menu na altura da tela */
+  overflow-y: auto; /* Permite rolar caso tenha muitos itens */
+  background-color: var(--surface-ground); /* Usa cor padrão do PrimeNG */
+}

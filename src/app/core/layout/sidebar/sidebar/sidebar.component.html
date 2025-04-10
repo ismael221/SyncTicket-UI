@@ -1,14 +1,25 @@
-<p-menu [model]="items">
-  <ng-template #start>
-    <h2>ClientSync</h2>
-  </ng-template>
-  <ng-template #end>
-    <button pRipple class="relative overflow-hidden w-full border-0 bg-transparent flex items-start p-2 pl-4 hover:bg-surface-100 dark:hover:bg-surface-800 rounded-none cursor-pointer transition-colors duration-200">
-      <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" class="mr-2" shape="circle" />
-      <span class="inline-flex flex-col">
-                <span class="font-bold">Ismael Nunes</span>
-                <span class="text-sm">Admin</span>
-            </span>
-    </button>
-  </ng-template>
-</p-menu>
+<div class="sidebar">
+  <div class="top-section">
+    <div class="icon-wrapper" pTooltip="Caixa de entrada"><i class="pi pi-comments"></i></div>
+    <div class="icon-wrapper active" pTooltip="Chat">
+      <i class="pi pi-comment"></i>
+      <span class="badge">19</span>
+    </div>
+    <div class="icon-wrapper" pTooltip="Robôs" ><i class="pi pi-bolt"></i></div>
+  
+    <div class="icon-wrapper" pTooltip="Contatos"><i class="pi pi-users"></i></div>
+    <div class="icon-wrapper" pTooltip="Relatórios"><i class="pi pi-chart-line"></i></div>
+    <div class="icon-wrapper" pTooltip="Agenda"><i class="pi pi-calendar-times"></i></div>
+    <hr />
+    <div class="icon-wrapper" pTooltip="IA" >
+      <i class="pi pi-circle-on spinner-icon"></i>
+    </div>
+  </div>
+
+  <div class="bottom-section">
+    <div class="icon-wrapper" pTooltip="Configurações" ><i class="pi pi-cog"></i></div>
+    <div class="profile-pic" pTooltip="Perfil" >
+      <img src="assets/imgs/profile.jpg" alt="User" />
+    </div>
+  </div>
+</div>

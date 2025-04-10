@@ -1,0 +1,28 @@
+<p-panel header="Archived" styleClass="mb-3"   [style]="{'background-color': '#161717'}" >
+  <ul class="chat-list">
+    @for (chat of chats; track $index) {
+      <li class="chat-item">
+        <div class="chat-avatar">
+          @if (chat.image) {
+            <img [src]="chat.image" alt="Avatar" />
+          }@else{
+            <i class="pi pi-user default-avatar"></i>
+          }
+         
+        </div>
+        <div class="chat-content">
+          <div class="chat-title">
+            <span class="chat-name">{{ chat.name }}</span>
+            <span class="chat-time">{{ chat.time }}</span>
+          </div>
+          <div class="chat-message">
+            <span [innerHTML]="chat.lastMessage"></span>
+            @if (chat.muted) {
+              <i class="pi pi-bell-slash"></i>
+            }
+          </div>
+        </div>
+      </li>
+    }
+  </ul>
+</p-panel>

@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import {MenuItem} from 'primeng/api';
-import {Menu} from 'primeng/menu';
 import {AvatarModule} from 'primeng/avatar';
+import { TooltipModule } from 'primeng/tooltip';
+
 
 @Component({
   selector: 'app-sidebar',
   imports: [
-    Menu,
-    AvatarModule
+    AvatarModule,
+    TooltipModule 
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'

@@ -6,16 +6,16 @@ import { MenuModule } from 'primeng/menu';
 
 
 @Component({
-  selector: 'app-chat',
+  selector: 'app-chat-window',
   imports: [
     CommonModule,
     MenuModule,
     ButtonModule
   ],
-  templateUrl: './chat.component.html',
-  styleUrl: './chat.component.scss'
+  templateUrl: './chat-window.component.html',
+  styleUrl: './chat-window.component.scss'
 })
-export class ChatComponent implements OnInit{
+export class ChatWindowComponent implements OnInit{
 
   items: MenuItem[] | undefined;
 

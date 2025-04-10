@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SplitterModule } from 'primeng/splitter';
-import { ChatComponent } from "../../chat/chat.component";
+import { ChatWindowComponent } from "../../chat-window/chat-window.component";
 import { ChatListComponent } from '../../chat-list/chat-list.component';
 
 
@@ -9,7 +9,7 @@ import { ChatListComponent } from '../../chat-list/chat-list.component';
   imports: [
     SplitterModule,
     ChatListComponent,
-    ChatComponent
+    ChatWindowComponent
 ],
   templateUrl: './chat-screen.component.html',
   styleUrl: './chat-screen.component.scss'

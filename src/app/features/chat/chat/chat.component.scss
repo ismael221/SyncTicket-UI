@@ -1,0 +1,133 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #111b21;
+    background-image: url('/assets/bg-whatsapp.png'); // você pode usar o padrão do WhatsApp
+    color: white;
+  }
+  
+  .chat-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color:#161717;
+    border-left: 1px solid #1e1e1e;
+  
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  
+    .chat-name {
+      flex-grow: 1;
+      font-weight: bold;
+    }
+  
+    .chat-actions i {
+      margin-left: 15px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+
+ 
+  .chat-body {
+    position: relative; // ESSENCIAL!
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    background-color: #161717;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background-image: url('/assets/imgs/background.png'); // caminho correto aqui
+        background-size: contain; // ou 'cover' se quiser preencher tudo
+        background-repeat: repeat;
+        background-position: center;
+        opacity: 0.08; // controle da opacidade
+        z-index: -1; // ficar atrás das mensagens
+      }
+
+ 
+  
+    .date-separator {
+      align-self: center;
+      font-size: 0.8rem;
+      color: gray;
+      margin: 10px 0;
+    }
+  
+    .message {
+      max-width: 70%;
+      display: flex;
+  
+      &.received {
+        align-self: flex-start;
+        .bubble {
+          background-color: #202c33;
+        }
+      }
+  
+      &.sent {
+        align-self: flex-end;
+        .bubble {
+          background-color: #005c4b;
+        }
+      }
+  
+      .bubble {
+        padding: 10px;
+        border-radius: 8px;
+        position: relative;
+        font-size: 0.95rem;
+        line-height: 1.4;
+
+        display: flex ;
+            min-width: 100px;
+            flex-direction: column;
+  
+        .time {
+          font-size: 0.7rem;
+          color: #ccc;
+          position: absolute;
+          bottom: 4px;
+          right: 6px;
+        }
+      }
+    }
+  }
+  
+  .chat-input {
+    display: flex;
+    align-items: center;
+    background-color: #202c33;
+    padding: 10px;
+    margin: 16px;
+    border-radius: 30px;
+    gap: 10px;
+  
+    input {
+      flex: 1;
+      background: #2a3942;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 15px;
+      color: white;
+      outline: none;
+    }
+  
+    i {
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }

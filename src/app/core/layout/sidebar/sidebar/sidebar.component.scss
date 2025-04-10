@@ -51,7 +51,9 @@
     }
 
     .spinner-icon {
-      color: #00bfff;
+      background: -webkit-linear-gradient(#3b08c9, #b40fb9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       animation: spin 1.5s linear infinite;
     }
   }

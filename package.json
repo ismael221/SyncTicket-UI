@@ -1,5 +1,5 @@
 {
-  "name": "client-sync",
+  "name": "sync-ticket",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -22,6 +22,7 @@
     "primeicons": "^7.0.0",
     "primeng": "^19.0.10",
     "rxjs": "~7.8.0",
+    "sync-ticket": "file:",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

@@ -2,11 +2,10 @@
     <app-sidebar></app-sidebar>
     <div class="main-content">
        @defer () {
-        <app-chat-screen/>
+        <router-outlet />
        }@loading() {
         <img src="https://media.tenor.com/UnFx-k_lSckAAAAM/amalie-steiness.gif" alt="">
        }
-        <router-outlet />
     </div>
   </div>
   

@@ -6,9 +6,10 @@
       <img src="assets/imgs/profile.jpg" class="avatar" />
       <span class="chat-name">Viviane</span>
       <div class="chat-actions">
-        <i class="pi pi-video"></i>
-        <i class="pi pi-search"></i>
-        <i class="pi pi-ellipsis-v"></i>
+        <p-button icon="pi pi-video" variant="text" severity="secondary"/>
+        <p-button icon="pi pi-search" variant="text" severity="secondary"/>
+        <p-menu #menu [model]="items" [popup]="true" />
+        <p-button (click)="menu.toggle($event)" icon="pi pi-ellipsis-v" variant="text" severity="secondary"/>
       </div>
     </div>
   
@@ -18,19 +19,14 @@
 
       <div class="date-separator">Yesterday</div>
   
-      <div class="message received">
-        <div class="bubble">
-          Oi
-          <span class="time">9:24 PM</span>
+      @for (message of messages; track $index) {
+        <div class="message" [ngClass]="message.type">
+          <div class="bubble">
+            Oi
+            <span class="time">9:24 PM</span>
+          </div>
         </div>
-      </div>
-  
-      <div class="message sent">
-        <div class="bubble">
-          Oi
-          <span class="time">9:25 AM</span>
-        </div>
-      </div>
+      }
   
     </div>
   

@@ -1,26 +1,30 @@
 <div class="sidebar">
   <div class="top-section">
-    <div class="icon-wrapper" pTooltip="Caixa de entrada"><i class="pi pi-comments"></i></div>
-    <div class="icon-wrapper active" pTooltip="Chat">
+    <a class="icon-wrapper" pTooltip="Caixa de entrada" routerLink="/inbox"   routerLinkActive="active"    >
+      <i class="pi pi-comments"></i>
+    </a>
+    <a class="icon-wrapper active" pTooltip="Chat" [routerLink]="['/chat']"   routerLinkActive="active"  >
       <i class="pi pi-comment"></i>
       <span class="badge">19</span>
-    </div>
-    <div class="icon-wrapper" pTooltip="Chamados" ><i class="pi pi-ticket"></i></div>
-    <div class="icon-wrapper" pTooltip="Robôs" ><i class="pi pi-bolt"></i></div>
+    </a>
+    <a class="icon-wrapper" pTooltip="Chamados" routerLink="/tickets"   routerLinkActive="active" ><i class="pi pi-ticket"></i></a>
+    <a class="icon-wrapper" pTooltip="Robôs" routerLink="/robos"   routerLinkActive="active"><i class="pi pi-bolt"></i></a>
   
-    <div class="icon-wrapper" pTooltip="Contatos"><i class="pi pi-users"></i></div>
-    <div class="icon-wrapper" pTooltip="Relatórios"><i class="pi pi-chart-line"></i></div>
-    <div class="icon-wrapper" pTooltip="Agenda"><i class="pi pi-calendar-times"></i></div>
+    <a class="icon-wrapper" pTooltip="Contatos" routerLink="/contacts"   routerLinkActive="active">
+      <i class="pi pi-users"></i>
+    </a>
+    <a class="icon-wrapper" pTooltip="Relatórios" routerLink="/dashboard"   routerLinkActive="active"><i class="pi pi-chart-line" ></i></a>
+    <a class="icon-wrapper" pTooltip="Agenda" routerLink="/agenda"   routerLinkActive="active"><i class="pi pi-calendar-times" ></i></a>
     <hr />
-    <div class="icon-wrapper" pTooltip="IA" >
+    <a class="icon-wrapper" pTooltip="IA" routerLink="/ia"   routerLinkActive="active">
       <i class="pi pi-circle-on spinner-icon"></i>
-    </div>
+    </a>
   </div>
 
   <div class="bottom-section">
-    <div class="icon-wrapper" pTooltip="Configurações" ><i class="pi pi-cog"></i></div>
-    <div class="profile-pic" pTooltip="Perfil" >
+    <a class="icon-wrapper" pTooltip="Configurações" routerLink="/settings"   routerLinkActive="active"><i class="pi pi-cog"></i></a>
+    <a class="profile-pic" pTooltip="Perfil" routerLink="/profile"   routerLinkActive="active">
       <img src="assets/imgs/profile.jpg" alt="User" />
-    </div>
+    </a>
   </div>
 </div>

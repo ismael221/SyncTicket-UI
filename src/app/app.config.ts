@@ -15,8 +15,9 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
-        preset: MyPreset
-      }
+        preset: MyPreset,
+      },
+      ripple: true
     })
   ]
 };

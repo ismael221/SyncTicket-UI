@@ -73,14 +73,14 @@
       &.received {
         align-self: flex-start;
         .bubble {
-          background-color: #202c33;
+          background-color: var(--p-gray-800);
         }
       }
   
       &.sent {
         align-self: flex-end;
         .bubble {
-          background-color: #005c4b;
+          background-color: var(--p-blue-500);
         }
       }
   

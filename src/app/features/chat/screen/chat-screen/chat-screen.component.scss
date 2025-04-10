@@ -1,4 +1,14 @@
 .panel1, .panel2{
     width: 100%;
+}
+
+.panel1{
     overflow:auto;
 }
+
+
+.panel1 {
+    scrollbar-width: thin;             /* Pode ser auto | thin | none */
+    scrollbar-color: #464444 #161717;     /* thumb | track */
+  }
+  

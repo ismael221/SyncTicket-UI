@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import {MenuItem} from 'primeng/api';
 import {AvatarModule} from 'primeng/avatar';
+import { Button } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 
 
@@ -8,6 +10,9 @@ import { TooltipModule } from 'primeng/tooltip';
   selector: 'app-sidebar',
   imports: [
     AvatarModule,
+    Button,
+    RouterLink, 
+    RouterOutlet,
     TooltipModule 
   ],
   templateUrl: './sidebar.component.html',

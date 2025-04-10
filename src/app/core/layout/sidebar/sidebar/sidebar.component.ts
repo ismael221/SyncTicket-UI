@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import {MenuItem} from 'primeng/api';
 import {AvatarModule} from 'primeng/avatar';
@@ -8,11 +8,10 @@ import { TooltipModule } from 'primeng/tooltip';
 
 @Component({
   selector: 'app-sidebar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AvatarModule,
-    Button,
     RouterLink, 
-    RouterOutlet,
     TooltipModule 
   ],
   templateUrl: './sidebar.component.html',

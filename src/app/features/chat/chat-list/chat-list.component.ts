@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import {Component, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
 import { PanelModule } from 'primeng/panel';
 
 
 
 @Component({
   selector: 'app-chat-list',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     PanelModule,
     CommonModule

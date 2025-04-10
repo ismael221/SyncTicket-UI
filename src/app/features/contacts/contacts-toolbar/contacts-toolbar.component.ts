@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ToolbarModule} from 'primeng/toolbar';
 import {IconField} from 'primeng/iconfield';
 import {InputIcon} from 'primeng/inputicon';
@@ -11,6 +11,7 @@ import { TieredMenu } from 'primeng/tieredmenu';
 
 @Component({
   selector: 'app-contacts-toolbar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     ToolbarModule,
     IconField,

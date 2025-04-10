@@ -3,10 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ClientSync": {
+    "SyncTicket": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
+          "changeDetection": "OnPush",
           "style": "scss"
         }
       },
@@ -17,11 +18,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/client-sync",
+            "outputPath": "dist/sync-ticket",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -64,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ClientSync:build:production"
+              "buildTarget": "SyncTicket:build:production"
             },
             "development": {
-              "buildTarget": "ClientSync:build:development"
+              "buildTarget": "SyncTicket:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,8 +80,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
-              "zone.js",
-              "zone.js/testing"
+          
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",

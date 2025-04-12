@@ -1,5 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import {MenuItem} from 'primeng/api';
 import {AvatarModule} from 'primeng/avatar';
 import { Button } from 'primeng/button';
@@ -12,12 +13,17 @@ import { TooltipModule } from 'primeng/tooltip';
   imports: [
     AvatarModule,
     RouterLink, 
+    CommonModule,
     TooltipModule 
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
+
+  constructor(public router: Router) {}
+
+  
   items: MenuItem[] | undefined;
 
   ngOnInit() {

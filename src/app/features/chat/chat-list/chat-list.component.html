@@ -1,14 +1,17 @@
-<p-panel header="Archived" styleClass="mb-3"   [style]="{'background-color': '#161717'}" >
+<p-panel
+  header="Archived"
+  styleClass="mb-3"
+  [style]="{ 'background-color': '#161717' }"
+>
   <ul class="chat-list">
     @for (chat of chats; track $index) {
       <li class="chat-item">
         <div class="chat-avatar">
           @if (chat.image) {
             <img [src]="chat.image" alt="Avatar" />
-          }@else{
+          } @else {
             <i class="pi pi-user default-avatar"></i>
           }
-         
         </div>
         <div class="chat-content">
           <div class="chat-title">

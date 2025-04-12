@@ -12,7 +12,6 @@ import { ChatDetailsComponent } from "../../chat-details/chat-details.component"
     SplitterModule,
     ChatListComponent,
     ChatWindowComponent,
-    ChatDetailsComponent
 ],
   templateUrl: './chat-screen.component.html',
   styleUrl: './chat-screen.component.scss'

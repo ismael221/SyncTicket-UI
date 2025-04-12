@@ -1,16 +1,18 @@
-<p-splitter styleClass="chat-app" [style]="{ height: '100vh' }"  [panelSizes]="[35, 75]" [minSizes]="[20,65]">
-    
-     <ng-template #panel >
-        <div class="panel1">
-            <app-chat-list/>
-        </div>
-     </ng-template>
-   
-     <ng-template #panel>
-        <div class="panel2">
-            <app-chat-window (openDetails)="toggleDetails()"/>
-        </div>
-     </ng-template>
-       
+<p-splitter
+  styleClass="chat-app"
+  [style]="{ height: '100vh' }"
+  [panelSizes]="[35, 75]"
+  [minSizes]="[20, 65]"
+>
+  <ng-template #panel>
+    <div class="panel1">
+      <app-chat-list />
+    </div>
+  </ng-template>
+
+  <ng-template #panel>
+    <div class="panel2">
+      <app-chat-window (openDetails)="toggleDetails()" />
+    </div>
+  </ng-template>
 </p-splitter>
-  

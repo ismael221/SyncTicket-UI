@@ -1,13 +1,15 @@
-<div class="main-layout" >
-   @if (showSidebar) {
-      <app-sidebar/>
-   }
-    <div class="main-content" [ngClass]="{'ml-64': showSidebar ? 64 : 0}">
-       @defer () {
-        <router-outlet />
-       }@loading() {
-        <img src="https://media.tenor.com/UnFx-k_lSckAAAAM/amalie-steiness.gif" alt="">
-       }
-    </div>
+<div class="main-layout">
+  @if (showSidebar) {
+    <app-sidebar />
+  }
+  <div class="main-content" [ngClass]="{ 'ml-64': showSidebar ? 64 : 0 }">
+    @defer {
+      <router-outlet />
+    } @loading {
+      <img
+        src="https://media.tenor.com/UnFx-k_lSckAAAAM/amalie-steiness.gif"
+        alt=""
+      />
+    }
   </div>
-  
+</div>

@@ -1,40 +1,42 @@
 <!-- chat.component.html -->
 <div class="chat-container">
-  
-    <!-- Cabeçalho -->
-    <div class="chat-header">
-      <img src="assets/imgs/profile.jpg" class="avatar" />
-      <span class="chat-name">Viviane</span>
-      <div class="chat-actions">
-        <p-button icon="pi pi-video" variant="text" severity="secondary"/>
-        <p-button icon="pi pi-search" variant="text" severity="secondary"/>
-        <p-menu #menu [model]="items" [popup]="true" />
-        <p-button (click)="menu.toggle($event)" icon="pi pi-ellipsis-v" variant="text" severity="secondary"/>
-      </div>
-    </div>
-  
-    <!-- Corpo do chat -->
-    <div class="chat-body">
-      <div class="back"></div>
-
-      <div class="date-separator">Yesterday</div>
-  
-      @for (message of messages; track $index) {
-        <div class="message" [ngClass]="message.type">
-          <div class="bubble">
-            Oi
-            <span class="time">9:24 PM</span>
-          </div>
-        </div>
-      }
-  
-    </div>
-  
-    <!-- Input de mensagem -->
-    <div class="chat-input">
-      <i class="pi pi-plus"></i>
-      <input type="text" placeholder="Type a message" />
-      <i class="pi pi-microphone"></i>
+  <!-- Cabeçalho -->
+  <div class="chat-header">
+    <img src="assets/imgs/profile.jpg" class="avatar" />
+    <span class="chat-name">Viviane</span>
+    <div class="chat-actions">
+      <p-button icon="pi pi-video" variant="text" severity="secondary" />
+      <p-button icon="pi pi-search" variant="text" severity="secondary" />
+      <p-menu #menu [model]="items" [popup]="true" />
+      <p-button
+        (click)="menu.toggle($event)"
+        icon="pi pi-ellipsis-v"
+        variant="text"
+        severity="secondary"
+      />
     </div>
   </div>
-  
+
+  <!-- Corpo do chat -->
+  <div class="chat-body">
+    <div class="back"></div>
+
+    <div class="date-separator">Yesterday</div>
+
+    @for (message of messages; track $index) {
+      <div class="message" [ngClass]="message.type">
+        <div class="bubble">
+          Oi
+          <span class="time">9:24 PM</span>
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- Input de mensagem -->
+  <div class="chat-input">
+    <i class="pi pi-plus"></i>
+    <input type="text" placeholder="Type a message" />
+    <i class="pi pi-microphone"></i>
+  </div>
+</div>

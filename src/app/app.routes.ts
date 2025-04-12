@@ -55,5 +55,10 @@ export const routes: Routes = [
         path: 'profile',
         title: 'Perfil',
         loadComponent: () => import('./features/profile/profile/profile.component').then(p => p.ProfileComponent)
+    },
+    {
+        path: 'robots',
+        title: 'Robôs',
+        loadComponent: () => import('./features/robots/robots.component').then(r => r.RobotsComponent)
     }
 ];

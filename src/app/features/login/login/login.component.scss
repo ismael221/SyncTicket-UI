@@ -1,0 +1,74 @@
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    color: #fff;
+  }
+  
+  .content{
+    display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+  }
+  .text-center {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .google-btn {
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 1rem 0;
+    color: #ccc;
+    position: relative;
+  }
+  .divider span::before,
+  .divider span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #444;
+  }
+  .divider span::before {
+    left: 0;
+  }
+  .divider span::after {
+    right: 0;
+  }
+  .divider span {
+    background-color: #1e1e1e;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .new-account,
+  .forgot-password {
+    color: #5aa0ff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .login-btn {
+    background-color: #3399ff;
+    border: none;
+  }
+  

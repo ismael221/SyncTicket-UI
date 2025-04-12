@@ -2,8 +2,11 @@
     display: flex
 }
 .main-content {
-    margin-left: 64px; // mesma largura da sidebar
     flex: 1;
     height: 100vh;
     overflow-y: auto;
+  }
+
+  .ml-64{
+    margin-left: 64px;
   }

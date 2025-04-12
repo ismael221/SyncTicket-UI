@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
 import { PanelModule } from 'primeng/panel';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 
 
 
@@ -9,6 +10,7 @@ import { PanelModule } from 'primeng/panel';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     PanelModule,
+    ScrollPanelModule,
     CommonModule
   ],
   templateUrl: './chat-list.component.html',

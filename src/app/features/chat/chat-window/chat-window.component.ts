@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output,ChangeDetectorRef, OnChanges, SimpleChanges, output } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
@@ -16,7 +16,22 @@ import { MenuModule } from 'primeng/menu';
   templateUrl: './chat-window.component.html',
   styleUrl: './chat-window.component.scss'
 })
-export class ChatWindowComponent implements OnInit{
+export class ChatWindowComponent implements OnInit, OnChanges{
+
+   openDetails = output<void>();
+  
+  constructor(private cd: ChangeDetectorRef) {}
+
+  abrirDetalhes() {
+    this.openDetails.emit();
+    this.refresh()
+  }
+
+  refresh() {
+    console.log("Refresco")
+    this.cd.detectChanges();
+  }
+
 
   items: MenuItem[] | undefined;
 
@@ -27,7 +42,8 @@ export class ChatWindowComponent implements OnInit{
             items: [
               {
                 label: 'Informações de contato',
-                icon: 'pi pi-info-circle'
+                icon: 'pi pi-info-circle',
+                command: () => this.abrirDetalhes()
             },
                 {
                   label: 'Editar',
@@ -50,6 +66,9 @@ export class ChatWindowComponent implements OnInit{
     ];
 }
 
+ngOnChanges(changes: SimpleChanges): void {
+    console.log("Mudou")
+}
   messages = [
     {
       text: 'Oi',

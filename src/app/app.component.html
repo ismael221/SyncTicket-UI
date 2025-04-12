@@ -1,6 +1,8 @@
-<div class="main-layout">
-    <app-sidebar></app-sidebar>
-    <div class="main-content">
+<div class="main-layout" >
+   @if (showSidebar) {
+      <app-sidebar/>
+   }
+    <div class="main-content" [ngClass]="{'ml-64': showSidebar ? 64 : 0}">
        @defer () {
         <router-outlet />
        }@loading() {

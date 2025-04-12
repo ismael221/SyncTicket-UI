@@ -2,6 +2,11 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
+        path: 'inbox',
+        title: "Inbox",
+        loadComponent: () => import('./features/inbox/inbox/inbox.component').then(i => i.InboxComponent)
+    },
+    {
         path:'dashboard',
         title: "SyncTicket | Relatórios",
         loadComponent: () => import('./features/dashboard/dashboard-screen/dashboard-screen.component').then(m => m.DashboardScreenComponent)
@@ -10,5 +15,45 @@ export const routes: Routes = [
         path: 'chat',
         title: 'SyncTicket | Chat',
         loadComponent: () => import('./features/chat/screen/chat-screen/chat-screen.component').then(c => c.ChatScreenComponent)
+    },
+    {
+        path: 'login',
+        title: 'SyncTicket | Login',
+        loadComponent: () => import('./features/login/login/login.component').then(c=> c.LoginComponent)
+    },
+    {
+        path: 'knowledge',
+        title: 'Knowledge Base',
+        loadComponent: () => import('./features/knowledge-base/kb-articles/kb-articles.component').then(k => k.KbArticlesComponent)
+    },
+    {
+        path: 'tickets',
+        title: 'Chamados',
+        loadComponent: () => import('./features/tickets/tickets/tickets.component').then(t => t.TicketsComponent)
+    },
+    {
+        path:'contacts',
+        title: "Contatos",
+        loadComponent: () => import('./features/contacts/contacts/contacts.component').then(c => c.ContactsComponent)
+    },
+    {
+        path: 'agenda',
+        title: "Agenda",
+        loadComponent: () => import('./features/agenda/agenda/agenda.component').then(a => a.AgendaComponent)
+    },
+    {
+        path: 'ia',
+        title: "Inteligência Articial",
+        loadComponent: () => import('./features/artificial-intelligence/articial-intelligence/articial-intelligence.component').then(ai => ai.ArticialIntelligenceComponent)
+    },
+    {
+        path: 'settings',
+        title: "Configurações",
+        loadComponent: () => import('./features/settings/settings/settings.component').then(s => s.SettingsComponent)
+    },
+    {
+        path: 'profile',
+        title: 'Perfil',
+        loadComponent: () => import('./features/profile/profile/profile.component').then(p => p.ProfileComponent)
     }
 ];

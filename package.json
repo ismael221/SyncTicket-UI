@@ -1,11 +1,14 @@
 {
   "name": "sync-ticket",
   "version": "0.0.0",
+  "main": "electron/main.js",
+  "author": "Ismael Nunes Campos",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "electron": "ng build --configuration production --base-href ./ && electron .",
     "test": "ng test"
   },
   "private": true,
@@ -30,12 +33,15 @@
     "@angular/cli": "^19.2.4",
     "@angular/compiler-cli": "^19.2.0",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^22.14.1",
+    "electron": "^35.1.5",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ts-node": "^10.9.2",
     "typescript": "~5.7.2"
   }
 }

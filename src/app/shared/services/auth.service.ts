@@ -17,7 +17,7 @@ export class AuthService {
       .post<any>(`${environment.baseUrl}/auth/login`, user)
       .toPromise();
     console.log(`Base URL: ${environment.baseUrl}`);
-    if (result && result.Token) {
+    if (result && result.token) {
       window.sessionStorage.setItem('token', result.token);
       return true;
     } else {
@@ -55,7 +55,7 @@ export class AuthService {
 
   //Método para pegar o token
   public getToken() {
-    const token = window.sessionStorage.getItem('access_token');
+    const token = window.sessionStorage.getItem('token');
     return token;
   }
 

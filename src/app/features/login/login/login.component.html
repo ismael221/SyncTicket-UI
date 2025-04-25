@@ -11,21 +11,23 @@
           
               <div class="divider"><span>OR</span></div>
           
-              <form>
-                <div class="p-field mb-3">
-                  <label for="email">Email</label>
-                  <input id="email" pInputText type="email" class="w-full" />
-                </div>
-          
+              <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <p-inputgroup>
+                  <p-inputgroup-addon>
+                      <i class="pi pi-user"></i>
+                  </p-inputgroup-addon>
+                  <input pInputText type="email" placeholder="Email" id="email"  formControlName="email"/>
+              </p-inputgroup>
+                
                 <div class="p-field mb-2">
-                  <label for="password">Password</label>
-                  <input id="password" pInputText type="password" class="w-full" />
-                  <div class="text-right mt-1">
-                    <a class="forgot-password">Forgot your password?</a>
-                  </div>
+                  <p-password formControlName="password" [feedback]="false" />
+
+                <div class="text-right mt-1">
+                  <a class="forgot-password">Forgot your password?</a>
+                </div>
                 </div>
           
-                <p-button label="Login" class="w-full mt-3 login-btn"></p-button>
+                <p-button label="Login" class="w-full mt-3 login-btn" type="submit"></p-button>
               </form>
         </div>
     </p-card>
